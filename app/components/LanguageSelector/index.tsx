@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { SlArrowUp, SlArrowDown } from "react-icons/sl";
-import IMAGES from "@/app/constants/images";
+// import IMAGES from "@/app/constants/images";
 import LANGUAGES from "@/app/constants/languages";
 
 const LanguageSelector = ({}) => {

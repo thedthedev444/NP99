@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import IMAGES from "../constants/images";
-import COLORS from "../constants/colors";
+// import COLORS from "../constants/colors";
 import Image from "next/image";
 
 // Replace these paths with your actual image imports or URLs

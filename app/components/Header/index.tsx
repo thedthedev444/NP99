@@ -15,25 +15,25 @@ import { LuRefreshCcw } from "react-icons/lu";
 import { isUserLoggedIn, logout } from "@/app/utils/utility";
 import LANGUAGES from "@/app/constants/languages";
 
-import {
-  FaHandHoldingUsd,
-  FaExchangeAlt,
-  FaMoneyBillAlt,
-  FaSearchDollar,
-  FaEnvelope,
-} from "react-icons/fa";
+// import {
+//   FaHandHoldingUsd,
+//   FaExchangeAlt,
+//   FaMoneyBillAlt,
+//   FaSearchDollar,
+//   FaEnvelope,
+// } from "react-icons/fa";
 import {
   RiEyeFill,
   RiEyeOffFill,
-  RiRefreshFill,
-  RiArrowUpSFill,
-  RiArrowDownSFill,
+  // RiRefreshFill,
+  // RiArrowUpSFill,
+  // RiArrowDownSFill,
 } from "react-icons/ri";
 
 const Header = ({ }) => {
   const { openModal } = useModal();
   const [isMobileView, setIsMobileView] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(isUserLoggedIn());
   const [showActions, setShowActions] = useState(false);
   const [showAmount, setShowAmount] = useState(false);
