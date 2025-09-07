@@ -84,7 +84,7 @@ const ContactUs = () => {
               LiveChat
             </p>
             <Image
-              src={IMAGES.liveChat}
+              src={IMAGES.contactLivechat}
               alt="LiveChat Icon"
               width={40}
               height={40}
@@ -96,7 +96,7 @@ const ContactUs = () => {
           <div className="bg-[#111] rounded-md px-6 py-4 text-center flex flex-col items-center w-40">
             <p className="text-sky-500 font-semibold text-lg mb-2">Telegram</p>
             <Image
-              src={IMAGES.telegram}
+              src={IMAGES.contactTelegram}
               alt="Telegram Icon"
               width={40}
               height={40}
