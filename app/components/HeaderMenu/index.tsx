@@ -53,9 +53,9 @@ const HeaderMenu = ({}) => {
             (item, index) => (
               <div key={item} className="flex items-center space-x-6">
                 <Link
-                  href={`/${item.toLowerCase()}`}
+                  href={`/${item?.toLowerCase()}`}
                   className={
-                    activeTab === item.toLowerCase()
+                    activeTab === item?.toLowerCase()
                       ? "hover:text-orange-400 font-medium border-b-2 border-white"
                       : "hover:text-orange-400 font-medium"
                   }

@@ -1,3 +1,5 @@
+"use client";
+
 import COLORS from "@/app/constants/colors";
 
 interface Section {

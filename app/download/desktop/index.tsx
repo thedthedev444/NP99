@@ -1,3 +1,4 @@
+"use client";
 import { BsChevronDown } from "react-icons/bs";
 import IMAGES from "@/app/constants/images";
 import COLORS from "@/app/constants/colors";
