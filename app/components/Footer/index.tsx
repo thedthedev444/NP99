@@ -1,3 +1,4 @@
+"use client";
 import IMAGES from "@/app/constants/images";
 
 const Footer = ({ }) => {

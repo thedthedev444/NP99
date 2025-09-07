@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import IMAGES from "@/app/constants/images";
 import COLORS from "@/app/constants/colors";
 import { HiOutlineChevronLeft } from "react-icons/hi";
