@@ -3,6 +3,7 @@ import HomeDesktop from "./desktop";
 import HomeMobile from "./mobile";
 
 const Home = () => {
+
   return (
     <>
       <div className="block md:hidden">
