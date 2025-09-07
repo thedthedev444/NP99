@@ -1,10 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+
+import React, { useRef } from "react";
 import Image from "next/image";
 import COLORS from "@/app/constants/colors";
 import IMAGES from "@/app/constants/images";
 
-const UpcomingMatch = ({ }) => {
+const UpcomingMatch = () => {
   const data = [
     {
       id: 1,
@@ -48,8 +49,10 @@ const UpcomingMatch = ({ }) => {
     },
   ];
 
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
   const scroll = (direction: string) => {
-    const container = document.getElementById("scroll-box-upcoming-match");
+    const container = scrollContainerRef.current;
     if (!container) return;
 
     container.scrollBy({
@@ -57,10 +60,14 @@ const UpcomingMatch = ({ }) => {
       behavior: "smooth",
     });
   };
+
   return (
     <>
-
-      <div className="px-6 pt-6 block md:hidden" style={{ backgroundColor: COLORS.tertiary }}>
+      {/* Mobile view */}
+      <div
+        className="px-6 pt-6 block md:hidden"
+        style={{ backgroundColor: COLORS.tertiary }}
+      >
         <div className="flex items-center justify-between">
           <div>
             <h2 className="font-bold text-[12px] text-white">{"Upcoming Match"}</h2>
@@ -83,6 +90,7 @@ const UpcomingMatch = ({ }) => {
 
         <div
           className="overflow-x-auto scroll-hide mt-4"
+          ref={scrollContainerRef}
           id="scroll-box-upcoming-match"
         >
           <div className="flex gap-5">
@@ -96,9 +104,8 @@ const UpcomingMatch = ({ }) => {
                     backgroundPosition: "center",
                   }}
                 >
-                  {/* Content */}
                   <div className="relative z-10 grid grid-cols-3 h-full items-center p-6 text-white">
-                    {/* Left Column - Bangladesh */}
+                    {/* Left */}
                     <div className="flex flex-col items-center">
                       <img
                         src={item.countryImage1}
@@ -113,11 +120,9 @@ const UpcomingMatch = ({ }) => {
                       </span>
                     </div>
 
-                    {/* Middle Column - Title, Time, Button */}
+                    {/* Middle */}
                     <div className="flex flex-col items-center justify-center gap-2">
-                      <h2 className="text-[12px] font-bold text-center">
-                        {item.name}
-                      </h2>
+                      <h2 className="text-[12px] font-bold text-center">{item.name}</h2>
                       <p className="text-[9px] text-center">{item.dateTime}</p>
                       <span className="text-[12px] font-bold mt-1 mb-1">VS</span>
                       <button
@@ -128,7 +133,7 @@ const UpcomingMatch = ({ }) => {
                       </button>
                     </div>
 
-                    {/* Right Column - India */}
+                    {/* Right */}
                     <div className="flex flex-col items-center">
                       <img
                         src={item.countryImage2}
@@ -150,11 +155,11 @@ const UpcomingMatch = ({ }) => {
         </div>
       </div>
 
-
-
-
-
-      <div className="px-20 py-10 hidden md:block" style={{ backgroundColor: COLORS.tertiary }}>
+      {/* Desktop view */}
+      <div
+        className="px-20 py-10 hidden md:block"
+        style={{ backgroundColor: COLORS.tertiary }}
+      >
         <div className="flex items-center justify-between ">
           <div>
             <h2 className="font-bold text-xl">{"Upcoming Match"}</h2>
@@ -177,6 +182,7 @@ const UpcomingMatch = ({ }) => {
 
         <div
           className="overflow-x-auto scroll-hide mt-4"
+          ref={scrollContainerRef}
           id="scroll-box-upcoming-match"
         >
           <div className="flex gap-5">
@@ -190,9 +196,8 @@ const UpcomingMatch = ({ }) => {
                     backgroundPosition: "center",
                   }}
                 >
-                  {/* Content */}
                   <div className="relative z-10 grid grid-cols-3 h-full items-center p-6 text-white">
-                    {/* Left Column - Bangladesh */}
+                    {/* Left */}
                     <div className="flex flex-col items-center">
                       <img
                         src={item.countryImage1}
@@ -207,11 +212,9 @@ const UpcomingMatch = ({ }) => {
                       </span>
                     </div>
 
-                    {/* Middle Column - Title, Time, Button */}
+                    {/* Middle */}
                     <div className="flex flex-col items-center justify-center gap-2">
-                      <h2 className="text-lg font-bold text-center">
-                        {item.name}
-                      </h2>
+                      <h2 className="text-lg font-bold text-center">{item.name}</h2>
                       <p className="text-sm text-center">{item.dateTime}</p>
                       <span className="text-lg font-bold mt-1 mb-1">VS</span>
                       <button
@@ -222,7 +225,7 @@ const UpcomingMatch = ({ }) => {
                       </button>
                     </div>
 
-                    {/* Right Column - India */}
+                    {/* Right */}
                     <div className="flex flex-col items-center">
                       <img
                         src={item.countryImage2}
@@ -244,7 +247,6 @@ const UpcomingMatch = ({ }) => {
         </div>
       </div>
     </>
-
   );
 };
 
