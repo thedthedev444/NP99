@@ -1,16 +1,16 @@
 "use client";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import Image from "next/image";
 import COLORS from "@/app/constants/colors";
-import Link from "next/link";
-import { TiHome } from "react-icons/ti";
+// import Link from "next/link";
+// import { TiHome } from "react-icons/ti";
 import BannerCarousel from "@/app/components/BannerCarousel";
 import IMAGES from "@/app/constants/images";
 import Marquee from "react-fast-marquee";
 import Recommended from "./shared/Recommended";
 import FeaturedGame from "./shared/FeaturedGame";
 import UpcomingMatch from "./shared/UpcomingMatch";
-import { IoClose } from "react-icons/io5";
+// import { IoClose } from "react-icons/io5";
 import AnnouncementPopUp from "@/app/components/AnnouncementPopUp";
 
 const HomeDesktop = ({}) => {

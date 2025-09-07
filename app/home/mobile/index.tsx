@@ -1,12 +1,13 @@
+'use client'
 import COLORS from "@/app/constants/colors";
 import IMAGES from "@/app/constants/images";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
-import BannerCarousel from "@/app/components/BannerCarousel";
+// import BannerCarousel from "@/app/components/BannerCarousel";
 import Recommended from "../desktop/shared/Recommended";
 import UpcomingMatch from "../desktop/shared/UpcomingMatch";
 import FeaturedGame from "../desktop/shared/FeaturedGame";
-import AnnouncementPopUp from "@/app/components/AnnouncementPopUp";
+// import AnnouncementPopUp from "@/app/components/AnnouncementPopUp";
 import Provider from "./shared/Provider";
 
 const HomeMobile = ({ }) => {

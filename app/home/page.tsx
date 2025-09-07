@@ -1,3 +1,4 @@
+'use client'
 import HomeDesktop from "./desktop";
 import HomeMobile from "./mobile";
 
